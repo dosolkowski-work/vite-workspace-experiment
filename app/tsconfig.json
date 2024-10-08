@@ -2,6 +2,7 @@
     "extends": "../tsconfig_base",
     "compilerOptions": {
         "baseUrl": "src",
+        "outDir": "dist",
         "paths": {
             "@qidydl/shared/*": ["../../shared/src/*"]
         }

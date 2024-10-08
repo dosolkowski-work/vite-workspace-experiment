@@ -14,6 +14,9 @@ importers:
       '@eslint/js':
         specifier: ^9.12.0
         version: 9.12.0
+      '@j4cobi/eslint-plugin-sort-imports':
+        specifier: ^1.0.2
+        version: 1.0.2(eslint@9.12.0)(typescript@5.6.2)
       '@tanstack/eslint-plugin-query':
         specifier: ^5.59.2
         version: 5.59.2(eslint@9.12.0)(typescript@5.6.2)
@@ -610,6 +613,9 @@ packages:
   '@humanwhocodes/retry@0.3.1':
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
+
+  '@j4cobi/eslint-plugin-sort-imports@1.0.2':
+    resolution: {integrity: sha512-0bTHYIohk2RnWW8+FQoE06s/80aF1iPxP62JiS2+9chUFrs9D7+p0niFtNctcZGRPo5aOKG9q/ypPlT8OWcwyg==}
 
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -3774,6 +3780,14 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.1': {}
+
+  '@j4cobi/eslint-plugin-sort-imports@1.0.2(eslint@9.12.0)(typescript@5.6.2)':
+    dependencies:
+      '@typescript-eslint/utils': 8.8.1(eslint@9.12.0)(typescript@5.6.2)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
 
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:

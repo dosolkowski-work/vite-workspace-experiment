@@ -42,7 +42,7 @@ const App = () => {
                 <Demo />
                 <Shared />
                 <Button loading={enabled && isLoading} onClick={() => setEnabled(true)}>
-                    Data length: {data || "click to load"}
+                    Data length: {data ?? "click to load"}
                 </Button>
             </div>
         </>
