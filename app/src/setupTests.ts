@@ -1,9 +1,8 @@
-import "@testing-library/jest-dom"; // This adds jest-dom assertions such as .toBeVisible()
+import "@testing-library/jest-dom/vitest"; // This adds jest-dom assertions such as .toBeVisible()
 import "vitest-axe/extend-expect"; // Adds TypeScript hints/IntelliSense
 import * as matchers from "vitest-axe/matchers";
-import { act } from "react-dom/test-utils";
+import { act } from "@testing-library/react";
 import { axe } from "vitest-axe";
-import { expect } from "vitest";
 
 // Add vitest-axe toHaveNoViolations() assertion
 expect.extend(matchers);
@@ -22,7 +21,13 @@ export async function accessibilityViolationsCheck(container?: HTMLElement) {
     }
 }
 
-// Mock required to shut tests up. We don't even use the canvas...
-HTMLCanvasElement.prototype.getContext = () => null;
+// Clunky TypeScript workaround seems to be necessary now for expect extends to work.
+// See https://vitest.dev/guide/extending-matchers.html for docs, but they weren't very helpful.
+declare module "vitest" {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any -- have to match interface we're altering
+    interface Assertion<T = any> {
+        toHaveNoViolations: () => void;
+    }
+}
 
 // Note that additional global test behavior can be configured here, e.g. run some check after every test

@@ -1,4 +1,4 @@
-import { SpawnOptions, spawn } from "child_process";
+import { type SpawnOptions, spawn } from "child_process";
 import { defineConfig } from "vitest/config";
 import fs from "fs";
 import path from "path";
@@ -48,20 +48,12 @@ async function getTLSSettings() {
 }
 
 // https://vitejs.dev/config/
-export default defineConfig(async ({ command, mode }) => {
+export default defineConfig(async ({ command }) => {
     const https = command === "serve" ? await getTLSSettings() : undefined;
 
     return {
         //NOTE: tsconfigPaths is required for vitest to resolve paths properly, even though vite itself is fine
         plugins: [react(), tsconfigPaths()],
-        css: {
-            preprocessorOptions: {
-                less: {
-                    // antd 4.x requires this
-                    javascriptEnabled: true,
-                },
-            },
-        },
         server: {
             port: 5000,
             https,

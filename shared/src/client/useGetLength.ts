@@ -2,7 +2,7 @@ import { api } from "./api";
 import { useQuery } from "@tanstack/react-query";
 import type { UseQueryOptions } from "@tanstack/react-query";
 
-type Options = UseQueryOptions<number, unknown, number, string[]>;
+type Options = Omit<UseQueryOptions<number, unknown, number, string[]>, "queryKey">;
 
 /**
  * Query helper to get length information.
@@ -11,5 +11,9 @@ type Options = UseQueryOptions<number, unknown, number, string[]>;
  * @returns React-Query properties.
  */
 export function useGetLength(uri: string, options?: Options) {
-    return useQuery(["getLength", uri], async (context) => await api.getLength(uri, context.signal), options);
+    return useQuery({
+        ...options,
+        queryKey: ["getLength", uri],
+        queryFn: async (context) => await api.getLength(uri, context.signal),
+    });
 }

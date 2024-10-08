@@ -1,6 +1,5 @@
 import "./App.css";
-import "./styles/ant-theme.less";
-import { Button, PageHeader } from "antd";
+import { Button } from "antd";
 import { Demo, Shared } from "@qidydl/shared/components";
 import { useGetLength } from "@qidydl/shared/client";
 import { useState } from "react";
@@ -21,7 +20,7 @@ const App = () => {
 
     return (
         <>
-            <PageHeader title="Demo Page with antd" />
+            <h1>Demo Page with antd</h1>
 
             <div className="App">
                 <div>
