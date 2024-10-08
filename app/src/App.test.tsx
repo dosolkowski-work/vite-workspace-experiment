@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { accessibilityViolationsCheck } from "setupTests";
 import { api } from "@qidydl/shared/client";
+import { myTest as it } from "@qidydl/shared/_test/testUtils";
 import { render, screen, waitFor } from "@testing-library/react";
 import App from "App";
-import userEvent from "@testing-library/user-event";
 
 let component: HTMLElement | undefined;
 
@@ -34,12 +34,12 @@ describe("The application", () => {
         await accessibilityViolationsCheck(component);
     });
 
-    it("displays data length", async () => {
+    it("displays data length", async ({ user }) => {
         const getLengthMock = vi.spyOn(api, "getLength").mockResolvedValue(123);
 
         renderComponent();
 
-        await userEvent.click(screen.getByRole("button", { name: /Data length/i }));
+        await user.click(screen.getByRole("button", { name: /Data length/i }));
         await waitFor(() => expect(getLengthMock).toBeCalled());
         expect(screen.getByRole("button", { name: /Data length/i })).toHaveTextContent(/123/);
     });
