@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "antd";
-import { Demo, Shared } from "@qidydl/shared/components";
+import { Demo } from "@qidydl/shared/components/Demo";
+import { Shared } from "@qidydl/shared/components/Shared";
 import { useGetLength } from "@qidydl/shared/client";
 import { useState } from "react";
 import reactLogo from "assets/react.svg";
