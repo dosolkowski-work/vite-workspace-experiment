@@ -1,20 +1,27 @@
 {
     "compilerOptions": {
         "allowJs": true,
-        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": false,
         "checkJs": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "jsx": "react-jsx",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
-        "module": "ESNext",
-        "moduleResolution": "bundler",
+        "module": "preserve",
         "noEmit": true,
         "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": true,
         "resolveJsonModule": true,
-        "skipLibCheck": true, // required because some libraries have problems--not sure if it's fixable
+        "skipLibCheck": true,
         "strict": true,
-        "target": "ESNext"
+        "target": "ESNext",
+        "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"],
+        "verbatimModuleSyntax": true
     }
 }

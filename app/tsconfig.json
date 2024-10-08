@@ -4,9 +4,8 @@
         "baseUrl": "src",
         "paths": {
             "@qidydl/shared/*": ["../../shared/src/*"]
-        },
-        "types": ["vite/client", "vitest/globals"] // Tell TypeScript that vitest is available without an import
+        }
     },
-    "include": ["src"],
+    "include": ["src", "vite.config.ts"],
     "references": [{ "path": "../shared" }]
 }
