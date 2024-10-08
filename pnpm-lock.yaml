@@ -181,6 +181,9 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^3.7.1
         version: 3.7.1(vite@5.4.8(@types/node@22.7.5))
+      '@vitest/runner':
+        specifier: ^2.1.2
+        version: 2.1.2
       jsdom:
         specifier: ^25.0.1
         version: 25.0.1
