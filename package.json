@@ -1,8 +1,8 @@
 {
-    "name": "@qidydl/vite-workspace-experiment",
+    "name": "@dosolkowski-work/vite-workspace-experiment",
     "description": "Experimenting with creating a web UI using Vite, workspaces, and Preact or React",
     "version": "1.0.0",
-    "author": "David Osolkowski (https://github.com/qidydl)",
+    "author": "David Osolkowski (https://github.com/dosolkowski-work/)",
     "devDependencies": {
         "eslint": "^8.47.0",
         "eslint-config-prettier": "^9.0.0",
@@ -17,17 +17,17 @@
         "vitest": "^0.34.2"
     },
     "engines": {
-        "node": ">=18.0.0",
-        "pnpm": ">=8"
+        "node": ">=20.0.0",
+        "pnpm": ">=9"
     },
-    "homepage": "https://github.com/qidydl/vite-workspace-experiment",
+    "homepage": "https://github.com/dosolkowski-work/vite-workspace-experiment",
     "license": "MIT",
-    "packageManager": "pnpm@8.5.0",
+    "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4",
     "prettier": {
         "endOfLine": "auto"
     },
     "private": true,
-    "repository": "qidydl/vite-workspace-experiment",
+    "repository": "dosolkowski-work/vite-workspace-experiment",
     "scripts": {
         "build": "pnpm -r run build",
         "clean": "pnpm -r run clean",

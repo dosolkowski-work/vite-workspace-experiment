@@ -1,8 +1,8 @@
 {
-    "name": "@qidydl/shared",
+    "name": "@dosolkowski-work/shared",
     "description": "Shared code proving we can refer to a library",
     "version": "1.0.0",
-    "author": "David Osolkowski (https://github.com/qidydl)",
+    "author": "David Osolkowski (https://github.com/dosolkowski-work/)",
     "browser": true,
     "dependencies": {
         "@tanstack/react-query": "^4.32.6",
@@ -23,16 +23,17 @@
         "vitest": "^0.34.2"
     },
     "engines": {
-        "node": ">=18.0.0",
-        "pnpm": ">=8"
+        "node": ">=20.0.0",
+        "pnpm": ">=9"
     },
-    "homepage": "https://github.com/qidydl/vite-workspace-experiment",
+    "homepage": "https://github.com/dosolkowski-work/vite-workspace-experiment",
     "license": "MIT",
+    "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/qidydl/vite-workspace-experiment",
-        "directory": "packages/shared"
+        "url": "https://github.com/dosolkowski-work/vite-workspace-experiment",
+        "directory": "shared"
     },
     "scripts": {
         "build": "tsc",
