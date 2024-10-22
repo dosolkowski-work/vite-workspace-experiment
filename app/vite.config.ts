@@ -48,8 +48,8 @@ async function getTLSSettings() {
 }
 
 // https://vitejs.dev/config/
-export default defineConfig(async ({ command }) => {
-    const https = command === "serve" ? await getTLSSettings() : undefined;
+export default defineConfig(async ({ command, mode }) => {
+    const https = command === "serve" && mode !== "test" ? await getTLSSettings() : undefined;
 
     return {
         //NOTE: tsconfigPaths is required for vitest to resolve paths properly, even though vite itself is fine
