@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { accessibilityViolationsCheck } from "setupTests";
+import { accessibilityViolationsCheck } from "testUtils";
 import { api } from "@qidydl/shared/client";
 import { myTest as it } from "@qidydl/shared/_test/testUtils";
 import { render, screen, waitFor } from "@testing-library/react";
